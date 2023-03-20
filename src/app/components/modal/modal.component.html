@@ -1,0 +1,20 @@
+<div class="modal-overlay">
+  <div class="modalWindow">
+    <h1 class="text-center mb-2 text-lg">{{ title | titlecase }}</h1>
+
+    <div class="input">
+      <input type="number" placeholder="Часы" [(ngModel)]="alarmHour"  min="0" max="11" />
+      <input class="input_min" type="number" placeholder="Минуты" [(ngModel)]="alarmMinute" min="0" max="59"  />
+    </div>
+
+<div class="button">
+    <button class = "button_set" type="submit" (click)="Alarm()">Set Alarm !</button>
+    <button class = "button_close" type="text" (click)="close()" >Close</button>
+</div>
+
+<p *ngIf="waiting" >waiting for awake...</p>
+<div class="alarmVideo" *ngIf="soundUrl">
+  <iframe width="500" height="280" src="https://www.youtube.com/embed/B5rr6tJLIIU?autoplay=1" title="YouTube video player" frameborder="0"  allow="accelerometer; autoplay ; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</div>
+</div>

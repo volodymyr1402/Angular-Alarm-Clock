@@ -1,0 +1,47 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(black, 0.5);
+}
+.modalWindow {
+  width: 500px;
+  height: 300px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 6 px;
+  background: rgb(228, 224, 224);
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+
+  h1{
+    text-align: center;
+  }
+
+
+  .input {
+    width: 60px;
+    display: flex;
+    margin: 30px 90px;
+    padding: 5px;
+    .input_min {
+      margin-left: 15px;
+    }
+  }
+
+  .button {
+    margin: 2rem;
+    margin-left: 165px;
+    // text-align: center;
+    .button_set{
+      margin-right: 15px;
+    }
+
+
+  }
+
+
+}

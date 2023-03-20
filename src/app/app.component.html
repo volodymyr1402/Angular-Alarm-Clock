@@ -1,0 +1,20 @@
+<h1>{{ title }}</h1>
+<div class="container">
+  <div class="clock">
+    <span
+      >{{ hours | number : "2.0-0" }}:{{ minutes | number : "2.0-0" }}:{{
+        seconds | number : "2.0-0"
+      }}
+      <sup>{{ day_night }}</sup></span
+    >
+  </div>
+  <div class="buttons">
+    <button class="button" (click)="openModal()">Set Alarm !</button>
+    <!-- <button class="button" (click)="resetAlarm()">Reset Alarm</button> -->
+  </div>
+  <div class="date">
+    <span>{{ date | date : "mediumDate" }} year</span>
+  </div>
+
+  <app-modal *ngIf="toggleModal"></app-modal>
+</div>
